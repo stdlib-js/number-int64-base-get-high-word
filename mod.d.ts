@@ -1,4 +1,4 @@
-/**
+/*
 * @license Apache-2.0
 *
 * Copyright (c) 2026 The Stdlib Authors.
@@ -16,16 +16,20 @@
 * limitations under the License.
 */
 
-'use strict';
+// TypeScript Version: 4.1
+
+/// <reference types="https://cdn.jsdelivr.net/gh/stdlib-js/types@main/index.d.ts"/>
+
+import { Int64 } from '@stdlib/types/number';
 
 /**
-* Return a 32-bit unsigned integer corresponding to the high 32-bit word of a 64-bit signed integer.
+* Returns a 32-bit unsigned integer corresponding to the high 32-bit word of a 64-bit signed integer.
 *
-* @module @stdlib/number-int64-base-get-high-word
+* @param x - input value
+* @returns higher order word (32-bit unsigned integer)
 *
 * @example
 * var Int64 = require( '@stdlib/number-int64-ctor' );
-* var getHighWord = require( '@stdlib/number-int64-base-get-high-word' );
 *
 * var x = new Int64( 4294967296 );
 * var w = getHighWord( x );
@@ -33,18 +37,14 @@
 *
 * @example
 * var Int64 = require( '@stdlib/number-int64-ctor' );
-* var getHighWord = require( '@stdlib/number-int64-base-get-high-word' );
 *
 * var x = new Int64( -1 );
 * var w = getHighWord( x );
 * // returns 4294967295
 */
-
-// MODULES //
-
-var main = require( './main.js' );
+declare function getHighWord( x: Int64 ): number;
 
 
 // EXPORTS //
 
-module.exports = main;
+export = getHighWord;
